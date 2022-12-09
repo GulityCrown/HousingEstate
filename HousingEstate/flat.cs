@@ -43,15 +43,11 @@ namespace HousingEstate
         public void AddHabbitant(Person habbitant)
         {
             people.Add(habbitant);
+            habbitant.FlatReference = this;
         }
         public virtual string ToString()
         {
             
-            string clovek = String.Empty;
-            for(int i = 0; i < people.Count; i++)
-            {
-                clovek += people[i].ToString();
-            }
             return String.Format($"FLAT\nnumber of apartment: {apartmentNumber}\napartment area: " +
                 $"{apartmentArea}\n number of rooms: {numberOfRooms}\nludia: " + GetInfoAboutAllHabbitants());
         }
