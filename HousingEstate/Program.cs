@@ -10,9 +10,9 @@ namespace HousingEstate
     {
         static void Main(string[] args)
         {
-            Person Roman = new Person("Roman", "Popper", 27);
-            Person Martin = new Person("Martin", "Popper", 27);
-            Person Dominik = new Person("Dominik", "Sloboda", 25);
+            Habittant Roman = new Habittant("Roman", "Popper", 27);
+            Habittant Martin = new Habittant("Martin", "Popper", 27);
+            Habittant Dominik = new Habittant("Dominik", "Sloboda", 25);
             
             flat DudovByt = new flat(526, 25, 4);
             Roman.FlatReference = DudovByt;

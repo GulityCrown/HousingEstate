@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HousingEstate
 {
-    internal class flat
+    public class flat
     {
         private int apartmentNumber;
         private int apartmentArea;
@@ -27,8 +27,8 @@ namespace HousingEstate
             set { numberOfRooms = value; }
             get { return this.numberOfRooms; }
         }
-        private List<Person> people = new List<Person>() { };
-        public List<Person> People
+        private List<Habittant> people = new List<Habittant>() { };
+        public List<Habittant> People
         {
             get { return people; }
             set { this.people = value; }
@@ -40,7 +40,7 @@ namespace HousingEstate
             this.apartmentArea = apartmentArea;
             this.numberOfRooms = numberOfRooms;
         }
-        public void AddHabbitant(Person habbitant)
+        public void AddHabbitant(Habittant habbitant)
         {
             people.Add(habbitant);
             habbitant.FlatReference = this;
@@ -48,8 +48,8 @@ namespace HousingEstate
         public virtual string ToString()
         {
             
-            return String.Format($"FLAT\nnumber of apartment: {apartmentNumber}\napartment area: " +
-                $"{apartmentArea}\n number of rooms: {numberOfRooms}\nludia: " + GetInfoAboutAllHabbitants());
+            return String.Format($"FLAT\nnumber of apartment: {this.apartmentNumber}\napartment area: " +
+                $"{this.apartmentArea}\n number of rooms: {this.numberOfRooms}\nludia: " + GetInfoAboutAllHabbitants());
         }
         public string GetInfoAboutAllHabbitants()
         {
