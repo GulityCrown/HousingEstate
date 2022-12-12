@@ -10,5 +10,19 @@ namespace HousingEstate
     {
         private int supisneCislo;
         private List<Entrance> vchody = new List<Entrance> (){ };
+       
+        public int SupisneCislo
+        {
+            get { return this.supisneCislo; }
+            set { this.SupisneCislo = value; }
+        }
+        private List<Entrance> Vchody
+        {
+            get { return this.vchody; }
+            set { this.vchody = value;}
+        }
+        
+        
+        
     }
 }

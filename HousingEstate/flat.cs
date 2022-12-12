@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,6 +41,8 @@ namespace HousingEstate
             this.apartmentArea = apartmentArea;
             this.numberOfRooms = numberOfRooms;
         }
+        
+        
         public void AddHabbitant(Habittant habbitant)
         {
             people.Add(habbitant);
