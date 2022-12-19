@@ -56,12 +56,12 @@ namespace HousingEstate
         }
         public string GetInfoAboutAllHabbitants()
         {
-            string clovek = String.Empty;
+            string person = String.Empty;
             for (int i = 0; i < people.Count; i++)
             {
-                clovek += people[i].ToString();
+                person += people[i].ToString();
             }
-            return clovek;
+            return person;
         }
         
     }

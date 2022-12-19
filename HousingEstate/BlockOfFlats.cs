@@ -8,21 +8,26 @@ namespace HousingEstate
 {
     internal class BlockOfFlats
     {
-        private int supisneCislo;
-        private List<Entrance> vchody = new List<Entrance> (){ };
+        private int cadastralRegistrationNumber;
+        private List<Entrance> entrances = new List<Entrance> (){ };
        
-        public int SupisneCislo
+        public int CadastralRegistrationNumber
         {
-            get { return this.supisneCislo; }
-            set { this.SupisneCislo = value; }
+            get { return this.cadastralRegistrationNumber; }
+            set { this.cadastralRegistrationNumber = value; }
         }
-        private List<Entrance> Vchody
+        public List<Entrance> Entrances
         {
-            get { return this.vchody; }
-            set { this.vchody = value;}
+            get { return this.entrances; }
+            set { this.entrances = value;}
         }
-        
-        
-        
+        public void AddEntrance(Entrance entrance)
+        {
+            this.entrances.Add(entrance);
+            entrance.PReference = this;
+            entrance.OrientationNumber += 2;
+        }
+       
+
     }
 }

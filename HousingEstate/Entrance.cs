@@ -11,9 +11,14 @@ namespace HousingEstate
         private int orientationNumber;
         private int north;
         private int south;
-        private int poschodia;
-        private int pocetBytov;
-
+        private int floor;
+        private int numOfFlats;
+        private BlockOfFlats pReference = new BlockOfFlats();
+        public BlockOfFlats PReference
+        {
+            get { return this.pReference; }
+            set { this.pReference = value; }
+        }
         public int OrientationNumber
         {
             get { return this.orientationNumber; }
@@ -34,6 +39,7 @@ namespace HousingEstate
                 }
             }
         }
+        
         public int South
         {
             get { return this.south; }
@@ -49,25 +55,25 @@ namespace HousingEstate
                 }
             }
         }
-        public int Poschodia
+        public int Floor
         {
-            get { return this.poschodia; }
-            set { this.poschodia = value; }
+            get { return this.floor; }
+            set { this.floor = value; }
         }
-        public int PocetBytov
+        public int NumOfFlats
         {
-            get { return this.pocetBytov; }
-            set { this.pocetBytov = value; }
+            get { return this.numOfFlats; }
+            set { this.numOfFlats = value; }
         }
         public Entrance()
         {
 
         }
-        public Entrance(int orientationNumber, int poschodia, int pocetBytov)
+        public Entrance(int orientationNumber, int floor, int numOfFlats)
         {
             this.orientationNumber = orientationNumber;
-            this.poschodia = poschodia;
-            this.pocetBytov = pocetBytov;
+            this.floor = floor;
+            this.numOfFlats = numOfFlats;
         }
         
 

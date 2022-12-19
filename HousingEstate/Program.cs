@@ -21,6 +21,8 @@ namespace HousingEstate
             DudovByt.AddHabbitant(Dominik);
             Console.WriteLine(DudovByt.GetInfoAboutAllHabbitants());
             Console.WriteLine(Roman.GetInfoAboutFlat());
+
+
         }
     }
 }
